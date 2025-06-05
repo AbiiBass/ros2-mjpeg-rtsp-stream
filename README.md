@@ -16,8 +16,14 @@ Install required packages:
 
 ```bash
 sudo apt install python3-pip
+```
+```bash
 pip3 install opencv-python
+```
+```bash
 pip3 install mjpeg-streamer
+```
+```bash
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 ```
 
@@ -55,6 +61,8 @@ Install `ffmpeg`:
 
 ```bash
 sudo apt update
+```
+```bash
 sudo apt install ffmpeg
 ```
 
