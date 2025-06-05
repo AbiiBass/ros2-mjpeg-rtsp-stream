@@ -56,12 +56,12 @@ Make sure your streamer or subscriber script can handle the encoding format used
 ## Streaming to RTSP
 
 ### Prerequisites
-
-Install `ffmpeg`:
-
+Update the terminal:
 ```bash
 sudo apt update
 ```
+
+Install `ffmpeg`:
 ```bash
 sudo apt install ffmpeg
 ```
@@ -71,8 +71,14 @@ Download and extract appropriate package **MediaMTX**:
 
 ```bash
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.12.3/mediamtx_v1.12.3_linux_arm64.tar.gz
+```
+```bash
 tar -xzf mediamtx_v1.12.3_linux_arm64.tar.gz
+```
+```bash
 cd mediamtx
+```
+```bash
 ./mediamtx
 ```
 
@@ -80,7 +86,7 @@ This will start the RTSP server locally on port `8554`.
 
 ### Forward MJPEG Stream to RTSP
 
-In a separate terminal, run:
+In a *separate* terminal *while above is still running*, run:
 
 ```bash
 ffmpeg -i http://<robot-ip>:<port-nuber>/my_camera -c:v copy -f rtsp rtsp://localhost:8554/mystream
